@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+var word_database={
+
+"chair": {
+    "type": "furniture",
+    "image": "images/chair.jpg",
+    "pos": "noun",
+    "chinese": "椅子",
+    "sentences": "There, sitting in his chair, was Carl, fast asleep.",
+    "chinese_sentence": "卡爾坐在椅子上，熟睡著。"
+},
+"table": {
+    "type": "furniture",
+    "image": "images/table.jpg",
+    "pos": "noun",
+    "chinese": "桌子",
+    "sentences": "They gathered around the table to play board games.",
+    "chinese_sentence": "他們圍著桌子玩桌遊。"
+},
+"bed": {
+    "type": "furniture",
+    "image": "images/bed.jpg",
+    "pos": "noun",
+    "chinese": "床",
+    "sentences": "She jumped on the bed and giggled.",
+    "chinese_sentence": "她跳上床嘻嘻笑。"
+},
+"sofa": {
+    "type": "furniture",
+    "image": "images/sofa.jpg",
+    "pos": "noun",
+    "chinese": "沙發",
+    "sentences": "The whole family sat on the sofa and watched a movie.",
+    "chinese_sentence": "全家坐在沙發上看電影。"
+},
+"shelf": {
+    "type": "furniture",
+    "image": "images/shelf.jpg",
+    "pos": "noun",
+    "chinese": "架子",
+    "sentences": "He placed his toys on the shelf to keep them organized.",
+    "chinese_sentence": "他把玩具放在架子上，保持整齊。"
+},
+"wardrobe": {
+    "type":"furniture",
+    "image": "images/wardrobe.jpg",
+    "pos": "noun",
+    "chinese": "衣櫃",
+    "sentences": "She opened the wardrobe to choose her outfit for the day.",
+    "chinese_sentence": "她打開衣櫃挑選她今天的服裝。"
+},
+"desk": {
+    "type":"furniture",
+    "image": "images/desk.jpg",
+    "pos": "noun",
+    "chinese": "書桌",
+    "sentences": "He sat at his desk and started working on his homework.",
+    "chinese_sentence": "他坐在書桌前開始做功課。"
+},
+"bookshelf": {
+    "type":"furniture",
+    "image": "images/bookshelf.jpg",
+    "pos": "noun",
+    "chinese": "書架",
+    "sentences": "The bookshelf was filled with colorful storybooks.",
+    "chinese_sentence": "書架上擺滿了色彩繽紛的故事書。"
+},
+"lamp": {
+    "type":"furniture",
+    "image": "images/lamp.jpg",
+    "pos": "noun",
+    "chinese": "台燈",
+    "sentences": "She turned on the lamp to read her favorite book.",
+    "chinese_sentence": "她打開台燈閱讀她最喜歡的書。"
+},
+"mirror": {
+    "type":"furniture",
+    "image": "images/mirror.jpg",
+    "pos": "noun",
+    "chinese": "鏡子",
+    "sentences": "She looked at herself in the mirror and smiled.",
+    "chinese_sentence": "她照鏡子看著自己，微笑著。"
+},
+"cabinet": {
+    "type":"furniture",
+    "image": "images/cabinet.jpg",
+    "pos": "noun",
+    "chinese": "櫥櫃",
+    "sentences": "The toys were neatly stored in the cabinet.",
+    "chinese_sentence": "玩具整齊地存放在櫥櫃裡。"
+},
+"stool": {
+    "type":"furniture",
+    "image": "images/stool.jpg",
+    "pos": "noun",
+    "chinese": "凳子",
+    "sentences": "He stood on the stool to reach the top shelf.",
+    "chinese_sentence": "他站在凳子上够到了最高的架子。"
+},
+"drawer": {
+    "type":"furniture",
+    "image": "images/drawer.jpg",
+    "pos": "noun",
+    "chinese": "抽屜",
+    "sentences": "I opened the drawer and found a teddy bear.",
+    "chinese_sentence": "我打開抽屜，發現了一隻泰迪熊。"
+}
+
+};
+
+
+
+function FindDictionary(){
+
+   var word=document.getElementById("word_input").value;
+   var result=document.getElementById("result");
+   result.innerHTML=word_database[word].sentences;
+
+
+}
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <div class="header">
+            <a id="HOME" href="HOME.html">HOME</a>
+            <a id="INTRODUCE" href="INTRODUCE.html">INTRODUCE</a>
+            <a id="DICTIONARY" href="DICTIONARY.html">DICTIONARY</a>
+            <a id="ABOUT US" href="ABOUT_US.html">ABOUT   US</a>
+    </div>
+
+    <div class="main">
+    <div class="input">
+    <input type="text" id="word_input" placeholder="please enter word" size="30" maxlength="30">
+    <button onclick="FindDictionary()">FIND</button>
+    </div>
+      <p  id="result"> gg</p>
+    </div>
+
+    <div class="footer">
+
+       <p>
+        This website is for learning purposes only, without any commercial profit.
+       </p>
+
+    </div>
+
+</body>
+</html>
